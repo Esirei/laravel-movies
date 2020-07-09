@@ -7,7 +7,7 @@
         Popular Movies
       </h2>
 
-      <div class="grid grid-cols-5 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         <div class="mt-8">
           <a href="#">
             <img src="{{ asset('images/parasite.jpg') }}" alt="parasite" class="hover:opacity-75 transition ease-in-out duration-300">
