@@ -2,12 +2,12 @@
 
 @section('content')
   <section class="movie-info border-b border-gray-800">
-    <div class="container mx-auto px-4 py-16 flex">
+    <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
       <img src="{{ asset('images/parasite.jpg') }}" alt="parasite" class="w-96">
 
-      <div class="ml-24">
+      <div class="md:ml-24">
         <h2 class="text-4xl font-semibold">Parasite (2019)</h2>
-        <div class="flex items-center text-gray-400 text-sm">
+        <div class="flex flex-wrap items-center text-gray-400 text-sm">
           <svg class="fill-current text-orange-500 w-4" viewBox="0 0 24 24">
             <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78"/>
           </svg>
