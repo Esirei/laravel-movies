@@ -16,3 +16,5 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ])
     .sass('resources/sass/app.scss', 'public/css');
+
+mix.browserSync('laravel-test.test');
