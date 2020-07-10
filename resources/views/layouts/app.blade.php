@@ -12,8 +12,8 @@
 <nav class="border-b border-gray-800">
   <div class="container mx-auto flex flex-col md:flex-row justify-between px-4 py-6">
     <ul class="flex flex-col md:flex-row items-center">
-      <li><a href="#">MovieApp</a></li>
-      <li class="md:ml-16 mt-3 md:mt-0"><a href="#" class="hover:text-gray-300">Movies</a></li>
+      <li><a href="{{ route('movies.index') }}">MovieApp</a></li>
+      <li class="md:ml-16 mt-3 md:mt-0"><a href="{{ route('movies.index') }}" class="hover:text-gray-300">Movies</a></li>
       <li class="md:ml-6 mt-3 md:mt-0"><a href="#" class="hover:text-gray-300">TV Shows</a></li>
       <li class="md:ml-6 mt-3 md:mt-0"><a href="#" class="hover:text-gray-300">Actors</a></li>
     </ul>
