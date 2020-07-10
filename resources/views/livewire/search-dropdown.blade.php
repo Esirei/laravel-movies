@@ -1,5 +1,5 @@
 <div class="relative mt-3 md:mt-0" x-data="{ isOpen: true }" @click.away="isOpen = false">
-  <input type="text" placeholder="Search" wire:model.debounce.500ms="search"
+  <input type="text" placeholder="Search" wire:model.debounce.500ms="search" @focus="isOpen = true"
          class="text-sm bg-gray-800 rounded-full w-64 px-4 py-1 pl-8 focus:shadow-outline focus:outline-none">
 
   <div wire:loading class="absolute inset-y-0 right-0 mr-4">
