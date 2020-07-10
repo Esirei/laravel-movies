@@ -2,7 +2,7 @@
   <input type="text" placeholder="Search" wire:model.debounce.500ms="search"
          class="text-sm bg-gray-800 rounded-full w-64 px-4 py-1 pl-8 focus:shadow-outline focus:outline-none">
 
-  <div class="absolute inset-y-0 right-0 mr-4">
+  <div wire:loading class="absolute inset-y-0 right-0 mr-4">
     <div class="spinner h-full"></div>
   </div>
 
