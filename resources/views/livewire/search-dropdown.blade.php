@@ -4,9 +4,9 @@
 
   @if(strlen($search) > 2)
     <div class="absolute bg-gray-800 rounded w-64 mt-4 text-sm">
-      @if(count($results) > 0)
+      @if(count($this->results) > 0)
         <ul>
-          @foreach($results as $result)
+          @foreach($this->results as $result)
             <li class="border-b border-gray-700">
               <a href="{{ route('movies.show', $result['id']) }}" class="block hover:bg-gray-700 px-3 py-3">
                 {{ $result['title'] }}

@@ -17,16 +17,20 @@ class SearchDropdown extends Component
      */
     public function render()
     {
-        $results = [];
-        if (!(strlen($this->search) <= 2)) {
-            $results = Http::withToken(config('services.tmdb.token'))
-                ->get("https://api.themoviedb.org/3/search/movie?query={$this->search}")
-                ->json();
+        return view('livewire.search-dropdown');
+    }
 
-            $results = collect($results['results'])->take(10);
+    // Computed to field => $this->results
+    public function getResultsProperty()
+    {
+        if (strlen($this->search) <= 2) {
+            return [];
         }
 
+        $results = Http::withToken(config('services.tmdb.token'))
+            ->get("https://api.themoviedb.org/3/search/movie?query={$this->search}")
+            ->json();
 
-        return view('livewire.search-dropdown', compact('results'));
+        return collect($results['results'])->take(10);
     }
 }
