@@ -2,6 +2,10 @@
   <input type="text" placeholder="Search" wire:model.debounce.500ms="search"
          class="text-sm bg-gray-800 rounded-full w-64 px-4 py-1 pl-8 focus:shadow-outline focus:outline-none">
 
+  <div class="absolute top-0 right-0 mr-4 mt-4">
+    <div class="spinner"></div>
+  </div>
+
   @if(strlen($search) > 2)
     <div class="absolute bg-gray-800 rounded w-64 mt-4 text-sm">
       @if(count($this->results) > 0)
