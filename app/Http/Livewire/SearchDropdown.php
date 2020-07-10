@@ -7,6 +7,8 @@ use Livewire\Component;
 
 class SearchDropdown extends Component
 {
+    public $search = '';
+
     /**
      * Get the view / contents that represent the component.
      *
