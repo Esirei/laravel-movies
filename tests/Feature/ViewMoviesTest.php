@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Illuminate\Support\Facades\Http;
+use Livewire\Livewire;
 use Tests\TestCase;
 
 class ViewMoviesTest extends TestCase
@@ -26,6 +27,19 @@ class ViewMoviesTest extends TestCase
         $response->assertSeeText('Master and Commander: The Far Side of the World');
         $response->assertSeeText('Now Playing');
         $response->assertSeeText('The Matrix');
+    }
+
+    public function testLivewireSearchDropdownWorks()
+    {
+        Http::fake([
+            'https://api.themoviedb.org/3/search/movie?query=onword' => Http::response($this->getTestJson('now-playing.json'))
+        ]);
+
+        $livewire = Livewire::test('search-dropdown');
+        $livewire->assertDontSee('onword');
+        $livewire->set('search', 'onword');
+//        $livewire->assertSee('onword');
+//        $livewire->assertSee('Onword');
     }
 
     private function getTestJson($file)
