@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Movie App</title>
   <link rel="stylesheet" href="{{ mix('css/tailwind.css') }}">
+  @livewireStyles
 </head>
 <body class="font-sans bg-gray-900 text-white">
 <nav class="border-b border-gray-800">
@@ -34,5 +35,6 @@
 </nav>
 
 @yield('content')
+@livewireScripts
 </body>
 </html>
