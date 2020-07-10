@@ -9,7 +9,11 @@
           @foreach($this->results as $result)
             <li class="border-b border-gray-700">
               <a href="{{ route('movies.show', $result['id']) }}" class="block hover:bg-gray-700 px-3 py-3 flex items-center">
-                <img src="https://image.tmdb.org/t/p/w92{{ $result['poster_path'] }}" alt="{{ $result['title'] }}" class="h-12">
+                @if($result['poster_path'])
+                  <img src="https://image.tmdb.org/t/p/w92{{ $result['poster_path'] }}" alt="{{ $result['title'] }}" class="h-12">
+                @else
+                  <img src="https://via.placeholder.com/50x75" alt="{{ $result['title'] }}" class="h-12">
+                @endif
                 <span class="ml-4">{{ $result['title'] }}</span>
               </a>
             </li>
