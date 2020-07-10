@@ -7,7 +7,7 @@
   </div>
 
   @if(strlen($search) > 2)
-    <div class="absolute bg-gray-800 rounded w-64 mt-4 text-sm" x-show="isOpen" @keydown.escape.window="isOpen = false">
+    <div class="absolute bg-gray-800 rounded w-64 mt-4 text-sm z-10" x-show="isOpen" @keydown.escape.window="isOpen = false">
       @if(count($this->results) > 0)
         <ul>
           @foreach($this->results as $result)
