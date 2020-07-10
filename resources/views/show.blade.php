@@ -61,7 +61,10 @@
                   <button class="text-3xl leading-none hover:text-gray-300">&times;</button>
                 </div>
                 <div class="modal-body px-8 py-8">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at distinctio dolore, ex fugiat id incidunt nam, odit quidem ratione, reprehenderit sequi sint temporibus veniam voluptate. Ab commodi deserunt officia.
+                  <div class="responsive-container overflow-hidden relative" style="padding-top: 56.25%">
+                    <iframe src="https://youtube.com/watch?v={{ $movie['videos']['results'][0]['key'] }}" height="560" width="315" style="border: 0" allow="autoplay; encrypted-media" allowfullscreen
+                            class="responsive-iframe absolute top-0 left-0 w-full h-full"></iframe>
+                  </div>
                 </div>
               </div>
             </div>
