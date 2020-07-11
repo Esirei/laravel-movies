@@ -55,7 +55,7 @@
               </button>
             </div>
 
-            <div class="fixed top-0 left-0 w-full h-full flex items-center shadow-lg overflow-y-auto" style="background-color: rgba(0,0,0,0.5)" x-show="isOpen">
+            <div class="fixed top-0 left-0 w-full h-full flex items-center shadow-lg overflow-y-auto" style="background-color: rgba(0,0,0,0.5)" x-show.transition.opacity="isOpen">
               <div class="container mx-auto lg:px-32 rounded-lg overflow-y-auto">
                 <div class="bg-gray-900 rounded">
                   <div class="flex justify-end pr-4 pt-2">
