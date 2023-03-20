@@ -108,7 +108,7 @@
         @foreach($movie['images']['backdrops'] as $image)
           <div class="mt-8">
             <a href="#" @click.prevent="{isOpen = true; image = 'https://image.tmdb.org/t/p/original/{{ $image['file_path'] }}'}" @keydown.escape.window="isOpen = false">
-              <img src="https://image.tmdb.org/t/p/w500/{{ $image['file_path'] }}" alt="parasite" class="hover:opacity-75 transition ease-in-out duration-300">
+              <img src="https://image.tmdb.org/t/p/w500/{{ $image['file_path'] }}" alt="parasite" loading="lazy" class="hover:opacity-75 transition ease-in-out duration-300">
             </a>
           </div>
         @endforeach
